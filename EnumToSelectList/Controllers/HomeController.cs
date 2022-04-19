@@ -1,4 +1,6 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using EnumToSelectList.Enums;
+using EnumToSelectList.Helpers;
+using Microsoft.AspNetCore.Mvc;
 
 namespace EnumToSelectList.Controllers
 {
@@ -13,6 +15,7 @@ namespace EnumToSelectList.Controllers
 
         public IActionResult Index()
         {
+            ViewBag.Priorities = Priority.High.ToSelectList();
             return View();
         }
 
